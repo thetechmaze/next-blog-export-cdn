@@ -1,7 +1,7 @@
+import CustomImage from "@/components/CustomImage";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { posts } from "@/posts";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function page() {
@@ -17,11 +17,9 @@ export default function page() {
           >
             {/* image */}
             <div className="h-60 w-full relative overflow-hidden rounded-md object-cover group-hover:scale-105 duration-300 transition-all">
-              <Image
-                src={p.thumbnail}
-                alt={`${p.title} - thumbnail`}
-                sizes="100vh"
-                fill
+              <CustomImage
+                srcStr={p.thumbnail}
+                altStr={`${p.title} - thumbnail`}
               />
             </div>
 

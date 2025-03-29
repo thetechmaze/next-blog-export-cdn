@@ -1,7 +1,7 @@
+import CustomImage from "@/components/CustomImage";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { posts } from "@/posts";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
       {/* hero */}
       <div className="mb-20 px-5 md:px-0">
         <div className="h-[250px] md:h-[600px] rounded-md relative">
-          <Image src={"/images/hero.png"} alt="hero image" sizes="100vh" fill />
+          <CustomImage srcStr={"/images/hero.png"} altStr="hero image" />
           <div className="absolute -bottom-8 bg-white dark:bg-[#242535] p-6 ml-10 rounded-lg shadow-lg max-w-[80%] md:max-w-[40%]">
             <p className="text-xs bg-blue-700 w-fit py-1 px-2 text-white rounded-md mb-1">
               Technology
@@ -36,11 +36,9 @@ export default function Home() {
           >
             {/* image */}
             <div className="h-60 w-full relative overflow-hidden rounded-md object-cover group-hover:scale-105 duration-300 transition-all">
-              <Image
-                src={p.thumbnail}
-                alt={`${p.title} - thumbnail`}
-                sizes="100vh"
-                fill
+              <CustomImage
+                srcStr={p.thumbnail}
+                altStr={`${p.title} - thumbnail`}
               />
             </div>
 
