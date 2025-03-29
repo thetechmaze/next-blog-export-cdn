@@ -9,6 +9,14 @@ export interface IPost {
 
 export const posts: IPost[] = [
   {
+    title: "new Post",
+    slug: "new-post",
+    author: "Robert Liu",
+    date: "2024-02-28",
+    category: "Blockchain",
+    thumbnail: "/images/thumbnails/cybersecurity.jpg",
+  },
+  {
     title: "Blockchain Beyond Cryptocurrency: Real-World Applications",
     slug: "blockchain-beyond-cryptocurrency-real-world-applications",
     author: "Robert Liu",
